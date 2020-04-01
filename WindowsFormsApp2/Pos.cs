@@ -24,8 +24,20 @@ namespace WindowsFormsApp2
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            Pos1 pos = new Pos1();
-            pos.Show();
+            try
+            {
+                    pos_SessionsTableAdapter.InsertQuery(1,DateTime.UtcNow);
+
+                    Pos1 pos = new Pos1();
+                    pos.Show();
+                
+                label1.Text = "مفتوح";
+                label1.ForeColor = Color.Green;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ/n" + ex.Message, "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -163,6 +163,7 @@
             // 
             this.cATOGRIESBindingSource.DataMember = "CATOGRIES";
             this.cATOGRIESBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
+            this.cATOGRIESBindingSource.CurrentChanged += new System.EventHandler(this.cATOGRIESBindingSource_CurrentChanged);
             // 
             // cATOGRIESTableAdapter
             // 

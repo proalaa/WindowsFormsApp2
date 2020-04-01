@@ -48,6 +48,11 @@ namespace WindowsFormsApp2
             }
 
 
-        } 
+        }
+
+        private void cATOGRIESBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

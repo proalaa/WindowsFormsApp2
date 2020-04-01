@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KeepAutomation.Barcode.Bean;
+using Aspose.BarCode.Generation;
 
 namespace WindowsFormsApp2
 {
@@ -185,6 +186,7 @@ namespace WindowsFormsApp2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = productsBindingSource;
             try
             {
                 this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
@@ -197,6 +199,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = productsBindingSource;
             try
             {
                 this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
@@ -209,6 +212,7 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = productsBindingSource;
             try
             {
                 this.productsTableAdapter.Fill(this._Al_Haddad_for_tradingDataSet.Products);
@@ -226,8 +230,20 @@ namespace WindowsFormsApp2
 
         private void bunifuCustomTextbox1_TextChanged_1(object sender, EventArgs e)
         {
-            bunifuCustomTextbox1.DataBindings.Clear();
-            bunifuCustomTextbox1.DataBindings.Add(new Binding("Text", productsBindingSource, "SKU"));
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            using (DataTable dataTable = new DataTable())
+            {
+                if (bunifuCustomTextbox1.Text != null)
+                {
+                    MessageBox.Show(((long)int.Parse(bunifuCustomTextbox1.Text)).ToString());
+                    dataTable.Rows.Add();
+                    dataGridView1.DataSource = dataTable;
+                }
+            } 
+
         }
     }
 }

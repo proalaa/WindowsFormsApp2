@@ -3674,8 +3674,6 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnStart_Date;
             
-            private global::System.Data.DataColumn columnActive;
-            
             private global::System.Data.DataColumn columnEnd_Date;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3737,14 +3735,6 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ActiveColumn {
-                get {
-                    return this.columnActive;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn End_DateColumn {
                 get {
                     return this.columnEnd_Date;
@@ -3788,13 +3778,12 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Pos_SessionsRow AddPos_SessionsRow(POSsRow parentPOSsRowByFK_Pos_Sessions_POSs, System.DateTime Start_Date, bool Active, System.DateTime End_Date) {
+            public Pos_SessionsRow AddPos_SessionsRow(POSsRow parentPOSsRowByFK_Pos_Sessions_POSs, System.DateTime Start_Date, System.DateTime End_Date) {
                 Pos_SessionsRow rowPos_SessionsRow = ((Pos_SessionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         Start_Date,
-                        Active,
                         End_Date};
                 if ((parentPOSsRowByFK_Pos_Sessions_POSs != null)) {
                     columnValuesArray[1] = parentPOSsRowByFK_Pos_Sessions_POSs[0];
@@ -3831,7 +3820,6 @@ namespace WindowsFormsApp2 {
                 this.columnID = base.Columns["ID"];
                 this.columnPos_Id = base.Columns["Pos_Id"];
                 this.columnStart_Date = base.Columns["Start_Date"];
-                this.columnActive = base.Columns["Active"];
                 this.columnEnd_Date = base.Columns["End_Date"];
             }
             
@@ -3844,8 +3832,6 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnPos_Id);
                 this.columnStart_Date = new global::System.Data.DataColumn("Start_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStart_Date);
-                this.columnActive = new global::System.Data.DataColumn("Active", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActive);
                 this.columnEnd_Date = new global::System.Data.DataColumn("End_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEnd_Date);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -3857,7 +3843,6 @@ namespace WindowsFormsApp2 {
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnStart_Date.AllowDBNull = false;
-                this.columnActive.DefaultValue = ((bool)(false));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6173,22 +6158,6 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Active {
-                get {
-                    try {
-                        return ((bool)(this[this.tablePos_Sessions.ActiveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Active\' in table \'Pos_Sessions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePos_Sessions.ActiveColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime End_Date {
                 get {
                     try {
@@ -6224,18 +6193,6 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPos_IdNull() {
                 this[this.tablePos_Sessions.Pos_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsActiveNull() {
-                return this.IsNull(this.tablePos_Sessions.ActiveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetActiveNull() {
-                this[this.tablePos_Sessions.ActiveColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10638,11 +10595,18 @@ SELECT ID, Pos_Id, Start_Date, End_Date FROM Pos_Sessions WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Pos_Id, Start_Date, End_Date FROM Pos_Sessions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.InsertQuery";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pos_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10830,6 +10794,41 @@ SELECT ID, Pos_Id, Start_Date, End_Date FROM Pos_Sessions WHERE (ID = @ID)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> Pos_Id, System.DateTime Start_Date, global::System.Nullable<global::System.DateTime> End_Date, int Original_ID, global::System.Nullable<int> Original_Pos_Id, System.DateTime Original_Start_Date, global::System.Nullable<global::System.DateTime> Original_End_Date) {
             return this.Update(Pos_Id, Start_Date, End_Date, Original_ID, Original_Pos_Id, Original_Start_Date, Original_End_Date, Original_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(global::System.Nullable<int> Pos_Id, global::System.Nullable<global::System.DateTime> Start_Date) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Pos_Id.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(Pos_Id.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Start_Date.HasValue == true)) {
+                command.Parameters[2].Value = ((System.DateTime)(Start_Date.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

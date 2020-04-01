@@ -10,9 +10,12 @@
     }
 }
 
-namespace WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters {
-    
-    
+namespace WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters
+{
+    partial class Pos_SessionsTableAdapter
+    {
+    }
+
     public partial class ProductsTableAdapter {
     }
 }
