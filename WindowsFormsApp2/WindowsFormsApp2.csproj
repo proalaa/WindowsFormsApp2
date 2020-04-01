@@ -33,11 +33,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Windows">
+      <HintPath>..\..\..\..\Downloads\Compressed\KA.Barcode.for.NETSuite\DLL\Net40\KeepAutomation.Barcode.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,16 +68,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catogries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catogries.Designer.cs">
+      <DependentUpon>Catogries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\DLA.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Persons.cs" />
+    <Compile Include="Pos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pos.Designer.cs">
+      <DependentUpon>Pos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pos1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pos1.Designer.cs">
+      <DependentUpon>Pos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="chasher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chasher.Designer.cs">
+      <DependentUpon>chasher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="returnPro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="returnPro.Designer.cs">
+      <DependentUpon>returnPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Al_Haddad_for_tradingDataSet.cs">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Al_Haddad_for_tradingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="إضافة منتج .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="إضافة منتج .Designer.cs">
+      <DependentUpon>إضافة منتج .cs</DependentUpon>
+    </Compile>
+    <Compile Include="إضافة مورد.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="إضافة مورد.Designer.cs">
+      <DependentUpon>إضافة مورد.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Catogries.resx">
+      <DependentUpon>Catogries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pos.resx">
+      <DependentUpon>Pos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pos1.resx">
+      <DependentUpon>Pos1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,7 +169,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="chasher.resx">
+      <DependentUpon>chasher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnPro.resx">
+      <DependentUpon>returnPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="إضافة منتج .resx">
+      <DependentUpon>إضافة منتج .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="إضافة مورد.resx">
+      <DependentUpon>إضافة مورد.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Inventory.datasource" />
+    <None Include="Properties\DataSources\_Al_Haddad_for_tradingDataSet.ProductsDataTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,9 +195,27 @@
     </Compile>
     <None Include="Resources\ArbFONTS-GEDinkum-Regular.ttf" />
     <None Include="Resources\NotoNaskhArabicUI-Bold.ttf" />
+    <None Include="_Al_Haddad_for_tradingDataSet.xsc">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Al_Haddad_for_tradingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Al_Haddad_for_tradingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Al_Haddad_for_tradingDataSet.xss">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Bunifu_UI_v1.52.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

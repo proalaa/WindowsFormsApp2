@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
-using MaterialSkin.Animations;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using Bunifu;
+using MetroFramework.Controls;
+using MetroFramework.Animation;
+using MetroFramework.Components;
+using MetroFramework;
 
 namespace WindowsFormsApp2
 {
@@ -72,6 +74,40 @@ namespace WindowsFormsApp2
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void home1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            home1.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pos1.BringToFront();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            inventory1.BringToFront();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+           
         }
     }
 

@@ -73,6 +73,16 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Bunifu_UI_v1_52 {
+            get {
+                object obj = ResourceManager.GetObject("Bunifu_UI_v1_52", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] NotoNaskhArabicUI_Bold {
             get {
                 object obj = ResourceManager.GetObject("NotoNaskhArabicUI_Bold", resourceCulture);
