@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KeepAutomation.Barcode.Bean;
 using Aspose.BarCode.Generation;
-
+using System.IO;
+using System.Xml;
 namespace WindowsFormsApp2
 {
     public partial class Inventory : UserControl
@@ -34,146 +35,13 @@ namespace WindowsFormsApp2
             NProd.Show();
         }
 
-        private void Inventory_Load(object sender, EventArgs e)
-        {
+        
 
-        }
+        
 
-        private void bunifuCustomDataGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+    
 
-        }
-
-        private void fillByType1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType1ToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType2ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType1ToolStripButton_Click_2(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.Fill(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType1ToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType2ToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType1ToolStripButton_Click_3(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByType2ToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
+       
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -186,10 +54,10 @@ namespace WindowsFormsApp2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = productsBindingSource;
+            //dataGridView1.DataSource = productsAllnfoBindingSource;
             try
             {
-                this.productsTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet.Products);
+                this.productsAllnfoTableAdapter.FillByType1(this._Al_Haddad_for_tradingDataSet1.productsAllnfo);
             }
             catch (System.Exception ex)
             {
@@ -199,10 +67,10 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = productsBindingSource;
+          //  dataGridView1.DataSource = productsAllnfoBindingSource;
             try
             {
-                this.productsTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet.Products);
+                this.productsAllnfoTableAdapter.FillByType2(this._Al_Haddad_for_tradingDataSet1.productsAllnfo);
             }
             catch (System.Exception ex)
             {
@@ -212,37 +80,79 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = productsBindingSource;
+         //   dataGridView1.DataSource = productsAllnfoBindingSource;
             try
             {
-                this.productsTableAdapter.Fill(this._Al_Haddad_for_tradingDataSet.Products);
+                this.productsAllnfoTableAdapter.Fill(this._Al_Haddad_for_tradingDataSet1.productsAllnfo);
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void bunifuCustomTextbox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         private void bunifuCustomTextbox1_TextChanged_1(object sender, EventArgs e)
         {
+            productsAllnfoBindingSource.Filter = "[اسم المنتج] LIKE'%"+bunifuCustomTextbox1.Text+"%'";
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            using (DataTable dataTable = new DataTable())
+            /* using (DataTable dataTable = new DataTable())
+             {
+                 if (bunifuCustomTextbox1.Text != null)
+                 {
+                     MessageBox.Show(((long)int.Parse(bunifuCustomTextbox1.Text)).ToString());
+                     dataTable.Rows.Add();
+                     //dataGridView1.DataSource = dataTable;
+                 }
+             } */
+            try
             {
-                if (bunifuCustomTextbox1.Text != null)
-                {
-                    MessageBox.Show(((long)int.Parse(bunifuCustomTextbox1.Text)).ToString());
-                    dataTable.Rows.Add();
-                    dataGridView1.DataSource = dataTable;
-                }
-            } 
+                //DataTable dataTable = new DataTable();
+                
+                //var b = (DataSet)productsAllnfoBindingSource.DataSource;
+                //DataSet dataSet = new DataSet();
+                
+                //foreach(DataRow row in b.Tables[0].Rows)
+                //{
+                //    if(row.Field<string>(1).Equals(bunifuCustomTextbox1.Text))
+                //    {
+                //        dataTable.ImportRow(row); 
+                //    }
+                //}
+                //dataSet.Tables.Add(dataTable);
+                //productsAllnfoBindingSource.DataSource = dataSet;
+                //productsAllnfoBindingSource.ResetBindings(true);
+                //f.Rows.Add(b.Rows.Find(dataGridView1.Rows[0].Cells[0].Value));
+                //productsAllnfoBindingSource.DataSource = f;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = productsAllnfoBindingSource;
+            try
+            {
+                this.productsAllnfoTableAdapter.Fill(this._Al_Haddad_for_tradingDataSet1.productsAllnfo);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

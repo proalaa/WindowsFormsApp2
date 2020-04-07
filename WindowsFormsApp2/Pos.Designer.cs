@@ -36,18 +36,11 @@
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.posSessionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Al_Haddad_for_tradingDataSet = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet();
             this.pos_SessionsTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.Pos_SessionsTableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.posIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.posSessionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +109,6 @@
             this.panel2.Controls.Add(this.bunifuDropdown1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.bunifuDatepicker1);
-            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(0, 218);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1239, 570);
@@ -167,28 +159,6 @@
             this.bunifuDatepicker1.TabIndex = 1;
             this.bunifuDatepicker1.Value = new System.DateTime(2020, 3, 24, 23, 29, 53, 956);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.posIdDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn,
-            this.activeDataGridViewCheckBoxColumn,
-            this.endDateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.posSessionsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1239, 500);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // posSessionsBindingSource
             // 
             this.posSessionsBindingSource.DataMember = "Pos_Sessions";
@@ -203,51 +173,6 @@
             // 
             this.pos_SessionsTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // posIdDataGridViewTextBoxColumn
-            // 
-            this.posIdDataGridViewTextBoxColumn.DataPropertyName = "Pos_Id";
-            this.posIdDataGridViewTextBoxColumn.HeaderText = "Pos_Id";
-            this.posIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.posIdDataGridViewTextBoxColumn.Name = "posIdDataGridViewTextBoxColumn";
-            this.posIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.posIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "Start_Date";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "Start_Date";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // activeDataGridViewCheckBoxColumn
-            // 
-            this.activeDataGridViewCheckBoxColumn.DataPropertyName = "Active";
-            this.activeDataGridViewCheckBoxColumn.HeaderText = "Active";
-            this.activeDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
-            this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.activeDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "End_Date";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "End_Date";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Pos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,12 +181,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Pos";
-            this.Size = new System.Drawing.Size(1239, 791);
+            this.Size = new System.Drawing.Size(1239, 806);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.posSessionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -272,7 +196,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label1;
@@ -281,10 +204,6 @@
         private System.Windows.Forms.BindingSource posSessionsBindingSource;
         private _Al_Haddad_for_tradingDataSet _Al_Haddad_for_tradingDataSet;
         private _Al_Haddad_for_tradingDataSetTableAdapters.Pos_SessionsTableAdapter pos_SessionsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn posIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activeDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
     }
 }

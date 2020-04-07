@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    class Persons
+    class User
     {
+       static public int ID { get; set; }
+       static public string Name { get; set; }
+       static public int Type { get; set; }
     }
 }

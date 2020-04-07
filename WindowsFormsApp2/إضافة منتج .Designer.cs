@@ -49,32 +49,40 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.inventoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Al_Haddad_for_tradingDataSet = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet();
             this.cATOGRIESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Al_Haddad_for_tradingDataSet = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.personsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.personsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alHaddadfortradingDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.uNITSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.inventoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.placesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cATOGRIESTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.CATOGRIESTableAdapter();
-            this.personsTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.PersonsTableAdapter();
+            this.placesTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.PlacesTableAdapter();
+            this.queriesTableAdapter1 = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.QueriesTableAdapter();
             this.uNITSTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.UNITSTableAdapter();
             this.inventoriesTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.InventoriesTableAdapter();
-            this.placesTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.PlacesTableAdapter();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).BeginInit();
+            this.alHaddadfortradingDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.personsTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.PersonsTableAdapter();
+            this.fillBytype1ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillBytype1ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.cATOGRIESTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.CATOGRIESTableAdapter();
+            this.fKInvoicesPersons1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoicesTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.InvoicesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cATOGRIESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alHaddadfortradingDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNITSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.placesBindingSource)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alHaddadfortradingDataSetBindingSource1)).BeginInit();
+            this.fillBytype1ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKInvoicesPersons1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,7 +133,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(244, 41);
+            this.label4.Location = new System.Drawing.Point(254, 42);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(58, 25);
@@ -141,6 +149,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "توليد رمز باركود";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -198,7 +207,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(621, 242);
+            this.label7.Location = new System.Drawing.Point(613, 243);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(84, 25);
@@ -232,7 +241,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(192, 383);
+            this.button3.Location = new System.Drawing.Point(192, 398);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 49);
             this.button3.TabIndex = 8;
@@ -246,7 +255,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(46, 383);
+            this.button4.Location = new System.Drawing.Point(46, 398);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 49);
             this.button4.TabIndex = 8;
@@ -256,12 +265,16 @@
             // 
             // bunifuCustomTextbox1
             // 
+            this.bunifuCustomTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.bunifuCustomTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(349, 41);
+            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(318, 41);
             this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(254, 28);
+            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(285, 28);
             this.bunifuCustomTextbox1.TabIndex = 9;
+            this.bunifuCustomTextbox1.TextChanged += new System.EventHandler(this.bunifuCustomTextbox1_TextChanged);
+            this.bunifuCustomTextbox1.Validated += new System.EventHandler(this.bunifuCustomTextbox1_Validated);
             // 
             // label9
             // 
@@ -287,36 +300,31 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.inventoriesBindingSource, "ID", true));
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cATOGRIESBindingSource, "ID", true));
             this.comboBox1.DataSource = this.cATOGRIESBindingSource;
             this.comboBox1.DisplayMember = "Name";
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(46, 42);
+            this.comboBox1.Location = new System.Drawing.Point(28, 41);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 30);
+            this.comboBox1.Size = new System.Drawing.Size(220, 30);
             this.comboBox1.TabIndex = 16;
             this.comboBox1.ValueMember = "ID";
-            // 
-            // inventoriesBindingSource
-            // 
-            this.inventoriesBindingSource.DataMember = "Inventories";
-            this.inventoriesBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
-            // 
-            // _Al_Haddad_for_tradingDataSet
-            // 
-            this._Al_Haddad_for_tradingDataSet.DataSetName = "_Al_Haddad_for_tradingDataSet";
-            this._Al_Haddad_for_tradingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cATOGRIESBindingSource
             // 
             this.cATOGRIESBindingSource.DataMember = "CATOGRIES";
             this.cATOGRIESBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
             // 
+            // _Al_Haddad_for_tradingDataSet
+            // 
+            this._Al_Haddad_for_tradingDataSet.DataSetName = "_Al_Haddad_for_tradingDataSet";
+            this._Al_Haddad_for_tradingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox2
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personsBindingSource, "ID", true));
-            this.comboBox2.DataSource = this.personsBindingSource;
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personsBindingSource1, "ID", true));
+            this.comboBox2.DataSource = this.personsBindingSource1;
             this.comboBox2.DisplayMember = "Name";
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
@@ -326,15 +334,15 @@
             this.comboBox2.TabIndex = 17;
             this.comboBox2.ValueMember = "ID";
             // 
+            // personsBindingSource1
+            // 
+            this.personsBindingSource1.DataMember = "Persons";
+            this.personsBindingSource1.DataSource = this._Al_Haddad_for_tradingDataSet;
+            // 
             // personsBindingSource
             // 
             this.personsBindingSource.DataMember = "Persons";
-            this.personsBindingSource.DataSource = this.alHaddadfortradingDataSetBindingSource;
-            // 
-            // alHaddadfortradingDataSetBindingSource
-            // 
-            this.alHaddadfortradingDataSetBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
-            this.alHaddadfortradingDataSetBindingSource.Position = 0;
+            this.personsBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
             // 
             // comboBox3
             // 
@@ -367,6 +375,11 @@
             this.comboBox4.TabIndex = 19;
             this.comboBox4.ValueMember = "ID";
             // 
+            // inventoriesBindingSource
+            // 
+            this.inventoriesBindingSource.DataMember = "Inventories";
+            this.inventoriesBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
+            // 
             // comboBox5
             // 
             this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.placesBindingSource, "Place_Id", true));
@@ -385,13 +398,9 @@
             this.placesBindingSource.DataMember = "Places";
             this.placesBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
             // 
-            // cATOGRIESTableAdapter
+            // placesTableAdapter
             // 
-            this.cATOGRIESTableAdapter.ClearBeforeFill = true;
-            // 
-            // personsTableAdapter
-            // 
-            this.personsTableAdapter.ClearBeforeFill = true;
+            this.placesTableAdapter.ClearBeforeFill = true;
             // 
             // uNITSTableAdapter
             // 
@@ -401,35 +410,53 @@
             // 
             this.inventoriesTableAdapter.ClearBeforeFill = true;
             // 
-            // placesTableAdapter
+            // alHaddadfortradingDataSetBindingSource1
             // 
-            this.placesTableAdapter.ClearBeforeFill = true;
+            this.alHaddadfortradingDataSetBindingSource1.DataSource = this._Al_Haddad_for_tradingDataSet;
+            this.alHaddadfortradingDataSetBindingSource1.Position = 0;
             // 
-            // fillByToolStrip
+            // personsTableAdapter
             // 
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(732, 27);
-            this.fillByToolStrip.TabIndex = 21;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.personsTableAdapter.ClearBeforeFill = true;
             // 
-            // fillByToolStripButton
+            // fillBytype1ToolStrip
             // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(48, 24);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            this.fillBytype1ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.fillBytype1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillBytype1ToolStripButton});
+            this.fillBytype1ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillBytype1ToolStrip.Name = "fillBytype1ToolStrip";
+            this.fillBytype1ToolStrip.Size = new System.Drawing.Size(732, 27);
+            this.fillBytype1ToolStrip.TabIndex = 21;
+            this.fillBytype1ToolStrip.Text = "fillBytype1ToolStrip";
+            // 
+            // fillBytype1ToolStripButton
+            // 
+            this.fillBytype1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBytype1ToolStripButton.Name = "fillBytype1ToolStripButton";
+            this.fillBytype1ToolStripButton.Size = new System.Drawing.Size(85, 24);
+            this.fillBytype1ToolStripButton.Text = "FillBytype1";
+            this.fillBytype1ToolStripButton.Click += new System.EventHandler(this.fillBytype1ToolStripButton_Click);
+            // 
+            // cATOGRIESTableAdapter
+            // 
+            this.cATOGRIESTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKInvoicesPersons1BindingSource
+            // 
+            this.fKInvoicesPersons1BindingSource.DataMember = "FK_Invoices_Persons1";
+            this.fKInvoicesPersons1BindingSource.DataSource = this.personsBindingSource1;
+            // 
+            // invoicesTableAdapter
+            // 
+            this.invoicesTableAdapter.ClearBeforeFill = true;
             // 
             // إضافة_منتج
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 489);
-            this.Controls.Add(this.fillByToolStrip);
+            this.Controls.Add(this.fillBytype1ToolStrip);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -457,15 +484,18 @@
             this.Name = "إضافة_منتج";
             this.Text = "إضافة_منتج";
             this.Load += new System.EventHandler(this.إضافة_منتج_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATOGRIESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alHaddadfortradingDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNITSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.placesBindingSource)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alHaddadfortradingDataSetBindingSource1)).EndInit();
+            this.fillBytype1ToolStrip.ResumeLayout(false);
+            this.fillBytype1ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKInvoicesPersons1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,19 +527,24 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
-        private _Al_Haddad_for_tradingDataSet _Al_Haddad_for_tradingDataSet;
-        private System.Windows.Forms.BindingSource cATOGRIESBindingSource;
-        private _Al_Haddad_for_tradingDataSetTableAdapters.CATOGRIESTableAdapter cATOGRIESTableAdapter;
         private System.Windows.Forms.BindingSource alHaddadfortradingDataSetBindingSource;
-        private System.Windows.Forms.BindingSource personsBindingSource;
-        private _Al_Haddad_for_tradingDataSetTableAdapters.PersonsTableAdapter personsTableAdapter;
+        private _Al_Haddad_for_tradingDataSetTableAdapters.PlacesTableAdapter placesTableAdapter;
+        private _Al_Haddad_for_tradingDataSet _Al_Haddad_for_tradingDataSet;
+        private _Al_Haddad_for_tradingDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter1;
+        private System.Windows.Forms.BindingSource placesBindingSource;
         private System.Windows.Forms.BindingSource uNITSBindingSource;
         private _Al_Haddad_for_tradingDataSetTableAdapters.UNITSTableAdapter uNITSTableAdapter;
         private System.Windows.Forms.BindingSource inventoriesBindingSource;
         private _Al_Haddad_for_tradingDataSetTableAdapters.InventoriesTableAdapter inventoriesTableAdapter;
-        private System.Windows.Forms.BindingSource placesBindingSource;
-        private _Al_Haddad_for_tradingDataSetTableAdapters.PlacesTableAdapter placesTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.BindingSource alHaddadfortradingDataSetBindingSource1;
+        private System.Windows.Forms.BindingSource personsBindingSource;
+        private _Al_Haddad_for_tradingDataSetTableAdapters.PersonsTableAdapter personsTableAdapter;
+        private System.Windows.Forms.ToolStrip fillBytype1ToolStrip;
+        private System.Windows.Forms.ToolStripButton fillBytype1ToolStripButton;
+        private System.Windows.Forms.BindingSource cATOGRIESBindingSource;
+        private _Al_Haddad_for_tradingDataSetTableAdapters.CATOGRIESTableAdapter cATOGRIESTableAdapter;
+        private System.Windows.Forms.BindingSource personsBindingSource1;
+        private System.Windows.Forms.BindingSource fKInvoicesPersons1BindingSource;
+        private _Al_Haddad_for_tradingDataSetTableAdapters.InvoicesTableAdapter invoicesTableAdapter;
     }
 }

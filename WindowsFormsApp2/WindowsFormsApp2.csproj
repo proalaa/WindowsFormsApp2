@@ -102,7 +102,7 @@
     <Compile Include="Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Actions\Persons.cs" />
+    <Compile Include="Actions\User.cs" />
     <Compile Include="Pos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +138,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_Al_Haddad_for_tradingDataSet1.cs">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Al_Haddad_for_tradingDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Al_Haddad_for_tradingDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="إضافة منتج .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +157,12 @@
     </Compile>
     <Compile Include="إضافة مورد.Designer.cs">
       <DependentUpon>إضافة مورد.cs</DependentUpon>
+    </Compile>
+    <Compile Include="تعديل_منتج.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تعديل_منتج.Designer.cs">
+      <DependentUpon>تعديل_منتج.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Catogries.resx">
       <DependentUpon>Catogries.cs</DependentUpon>
@@ -190,6 +204,9 @@
     <EmbeddedResource Include="إضافة مورد.resx">
       <DependentUpon>إضافة مورد.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تعديل_منتج.resx">
+      <DependentUpon>تعديل_منتج.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -212,6 +229,17 @@
     </None>
     <None Include="_Al_Haddad_for_tradingDataSet.xss">
       <DependentUpon>_Al_Haddad_for_tradingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Al_Haddad_for_tradingDataSet1.xsc">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Al_Haddad_for_tradingDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Al_Haddad_for_tradingDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Al_Haddad_for_tradingDataSet1.xss">
+      <DependentUpon>_Al_Haddad_for_tradingDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

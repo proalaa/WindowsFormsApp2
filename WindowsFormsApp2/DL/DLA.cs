@@ -65,8 +65,7 @@ namespace WindowsFormsApp2.DL
 
         public void ExecuteCommand(string Sp, SqlParameter[] pars)
         {
-            using (var txscope = new TransactionScope(TransactionScopeOption.RequiresNew))
-            {
+            
                 try
                 {
                     using (SqlConnection objConn = new SqlConnection(ConnectionString))
@@ -84,23 +83,22 @@ namespace WindowsFormsApp2.DL
                             }
                         }
                         sqlCommand1.ExecuteNonQuery();
-                       
-
-                        //The Transaction will be completed    
-                        txscope.Complete();
+                        sqlCommand1.Dispose();
+                        
                     }
                 }
                 catch (Exception ex)
                 {
                     // Log error    
-                    txscope.Dispose();
+                    
+
                     MessageBox.Show(ex.Message);
                 }
             }
            
             
           
-        }
+        
            
 
 

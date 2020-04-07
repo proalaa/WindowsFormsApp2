@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_Al_Haddad_for_tradingDataSet1" targetNamespace="http://tempuri.org/_Al_Haddad_for_tradingDataSet1.xsd" xmlns:mstns="http://tempuri.org/_Al_Haddad_for_tradingDataSet1.xsd" xmlns="http://tempuri.org/_Al_Haddad_for_tradingDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Al_Haddad_for_tradingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Al_Haddad_for_tradingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.Al_Haddad_for_tradingConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="productsAllnfoTableAdapter" GeneratorDataComponentClassName="productsAllnfoTableAdapter" Name="productsAllnfo" UserDataComponentName="productsAllnfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Al_Haddad_for_tradingConnectionString (Settings)" DbObjectName="[Al-Haddad_for_trading].dbo.productsAllnfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SKU, [اسم المنتج], [سعر الشراء], [سعر البيع], الوحده, الصنف, المكان, المخزن, [رقم الفاتورة], الكمية
+FROM     productsAllnfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SKU" DataSetColumn="SKU" />
+              <Mapping SourceColumn="اسم المنتج" DataSetColumn="اسم المنتج" />
+              <Mapping SourceColumn="سعر الشراء" DataSetColumn="سعر الشراء" />
+              <Mapping SourceColumn="سعر البيع" DataSetColumn="سعر البيع" />
+              <Mapping SourceColumn="الوحده" DataSetColumn="الوحده" />
+              <Mapping SourceColumn="الصنف" DataSetColumn="الصنف" />
+              <Mapping SourceColumn="المكان" DataSetColumn="المكان" />
+              <Mapping SourceColumn="المخزن" DataSetColumn="المخزن" />
+              <Mapping SourceColumn="رقم الفاتورة" DataSetColumn="رقم الفاتورة" />
+              <Mapping SourceColumn="الكمية" DataSetColumn="الكمية" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Al_Haddad_for_tradingConnectionString (Settings)" DbObjectName="[Al-Haddad_for_trading].dbo.productsAllnfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByType1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByType1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByType1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SKU, [اسم المنتج], الصنف, الكمية, المخزن, المكان, الوحده, [رقم الفاتورة], [سعر البيع], [سعر الشراء] FROM productsAllnfo WHERE (الصنف = N'الكترونيات')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Al_Haddad_for_tradingConnectionString (Settings)" DbObjectName="[Al-Haddad_for_trading].dbo.productsAllnfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByType2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByType2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByType2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SKU, [اسم المنتج], الصنف, الكمية, المخزن, المكان, الوحده, [رقم الفاتورة], [سعر البيع], [سعر الشراء] FROM productsAllnfo WHERE (الصنف = N'ادوات منزلية')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_Al_Haddad_for_tradingDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Al_Haddad_for_tradingDataSet1" msprop:Generator_UserDSName="_Al_Haddad_for_tradingDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="productsAllnfo" msprop:Generator_TableClassName="productsAllnfoDataTable" msprop:Generator_TableVarName="tableproductsAllnfo" msprop:Generator_RowChangedName="productsAllnfoRowChanged" msprop:Generator_TablePropName="productsAllnfo" msprop:Generator_RowDeletingName="productsAllnfoRowDeleting" msprop:Generator_RowChangingName="productsAllnfoRowChanging" msprop:Generator_RowEvHandlerName="productsAllnfoRowChangeEventHandler" msprop:Generator_RowDeletedName="productsAllnfoRowDeleted" msprop:Generator_RowClassName="productsAllnfoRow" msprop:Generator_UserTableName="productsAllnfo" msprop:Generator_RowEvArgName="productsAllnfoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKU" msprop:Generator_ColumnVarNameInTable="columnSKU" msprop:Generator_ColumnPropNameInRow="SKU" msprop:Generator_ColumnPropNameInTable="SKUColumn" msprop:Generator_UserColumnName="SKU" type="xs:long" />
+              <xs:element name="اسم_x0020_المنتج" msprop:Generator_ColumnVarNameInTable="columnاسم_المنتج" msprop:Generator_ColumnPropNameInRow="اسم_المنتج" msprop:Generator_ColumnPropNameInTable="اسم_المنتجColumn" msprop:Generator_UserColumnName="اسم المنتج">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="سعر_x0020_الشراء" msprop:Generator_ColumnVarNameInTable="columnسعر_الشراء" msprop:Generator_ColumnPropNameInRow="سعر_الشراء" msprop:Generator_ColumnPropNameInTable="سعر_الشراءColumn" msprop:Generator_UserColumnName="سعر الشراء" type="xs:decimal" />
+              <xs:element name="سعر_x0020_البيع" msprop:Generator_ColumnVarNameInTable="columnسعر_البيع" msprop:Generator_ColumnPropNameInRow="سعر_البيع" msprop:Generator_ColumnPropNameInTable="سعر_البيعColumn" msprop:Generator_UserColumnName="سعر البيع" type="xs:decimal" />
+              <xs:element name="الوحده" msprop:Generator_ColumnVarNameInTable="columnالوحده" msprop:Generator_ColumnPropNameInRow="الوحده" msprop:Generator_ColumnPropNameInTable="الوحدهColumn" msprop:Generator_UserColumnName="الوحده" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الصنف" msprop:Generator_ColumnVarNameInTable="columnالصنف" msprop:Generator_ColumnPropNameInRow="الصنف" msprop:Generator_ColumnPropNameInTable="الصنفColumn" msprop:Generator_UserColumnName="الصنف" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="المكان" msprop:Generator_ColumnVarNameInTable="columnالمكان" msprop:Generator_ColumnPropNameInRow="المكان" msprop:Generator_ColumnPropNameInTable="المكانColumn" msprop:Generator_UserColumnName="المكان">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="المخزن" msprop:Generator_ColumnVarNameInTable="columnالمخزن" msprop:Generator_ColumnPropNameInRow="المخزن" msprop:Generator_ColumnPropNameInTable="المخزنColumn" msprop:Generator_UserColumnName="المخزن">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رقم_x0020_الفاتورة" msprop:Generator_ColumnVarNameInTable="columnرقم_الفاتورة" msprop:Generator_ColumnPropNameInRow="رقم_الفاتورة" msprop:Generator_ColumnPropNameInTable="رقم_الفاتورةColumn" msprop:Generator_UserColumnName="رقم الفاتورة" type="xs:int" />
+              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:productsAllnfo" />
+      <xs:field xpath="mstns:SKU" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

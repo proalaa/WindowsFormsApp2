@@ -29,16 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Al_Haddad_for_tradingDataSet = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar3 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar4 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.productsTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.ProductsTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp2._Al_Haddad_for_tradingDataSetTableAdapters.TableAdapterManager();
             this.tabControl1.SuspendLayout();
@@ -72,16 +67,6 @@
             this.tabPage1.Text = "المبيعات";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
-            // 
-            // _Al_Haddad_for_tradingDataSet
-            // 
-            this._Al_Haddad_for_tradingDataSet.DataSetName = "_Al_Haddad_for_tradingDataSet";
-            this._Al_Haddad_for_tradingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
@@ -92,94 +77,15 @@
             this.tabPage2.Text = "المشتريات";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // bunifuCircleProgressbar2
+            // productsBindingSource
             // 
-            this.bunifuCircleProgressbar2.animated = false;
-            this.bunifuCircleProgressbar2.animationIterval = 5;
-            this.bunifuCircleProgressbar2.animationSpeed = 300;
-            this.bunifuCircleProgressbar2.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar2.BackgroundImage")));
-            this.bunifuCircleProgressbar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCircleProgressbar2.LabelVisible = true;
-            this.bunifuCircleProgressbar2.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar2.LineThickness = 5;
-            this.bunifuCircleProgressbar2.Location = new System.Drawing.Point(400, 9);
-            this.bunifuCircleProgressbar2.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar2.MaxValue = 100;
-            this.bunifuCircleProgressbar2.Name = "bunifuCircleProgressbar2";
-            this.bunifuCircleProgressbar2.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar2.TabIndex = 0;
-            this.bunifuCircleProgressbar2.Value = 0;
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet;
             // 
-            // bunifuCircleProgressbar1
+            // _Al_Haddad_for_tradingDataSet
             // 
-            this.bunifuCircleProgressbar1.animated = false;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 300;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(115, 9);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar1.TabIndex = 0;
-            this.bunifuCircleProgressbar1.Value = 0;
-            // 
-            // bunifuCircleProgressbar3
-            // 
-            this.bunifuCircleProgressbar3.animated = false;
-            this.bunifuCircleProgressbar3.animationIterval = 5;
-            this.bunifuCircleProgressbar3.animationSpeed = 300;
-            this.bunifuCircleProgressbar3.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar3.BackgroundImage")));
-            this.bunifuCircleProgressbar3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCircleProgressbar3.LabelVisible = true;
-            this.bunifuCircleProgressbar3.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar3.LineThickness = 5;
-            this.bunifuCircleProgressbar3.Location = new System.Drawing.Point(933, 9);
-            this.bunifuCircleProgressbar3.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar3.MaxValue = 100;
-            this.bunifuCircleProgressbar3.Name = "bunifuCircleProgressbar3";
-            this.bunifuCircleProgressbar3.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar3.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar3.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar3.TabIndex = 0;
-            this.bunifuCircleProgressbar3.Value = 0;
-            // 
-            // bunifuCircleProgressbar4
-            // 
-            this.bunifuCircleProgressbar4.animated = true;
-            this.bunifuCircleProgressbar4.animationIterval = 1;
-            this.bunifuCircleProgressbar4.animationSpeed = 1;
-            this.bunifuCircleProgressbar4.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar4.BackgroundImage")));
-            this.bunifuCircleProgressbar4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuCircleProgressbar4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCircleProgressbar4.LabelVisible = true;
-            this.bunifuCircleProgressbar4.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar4.LineThickness = 5;
-            this.bunifuCircleProgressbar4.Location = new System.Drawing.Point(664, 9);
-            this.bunifuCircleProgressbar4.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar4.MaxValue = 100;
-            this.bunifuCircleProgressbar4.Name = "bunifuCircleProgressbar4";
-            this.bunifuCircleProgressbar4.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar4.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar4.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar4.TabIndex = 0;
-            this.bunifuCircleProgressbar4.Value = 20;
+            this._Al_Haddad_for_tradingDataSet.DataSetName = "_Al_Haddad_for_tradingDataSet";
+            this._Al_Haddad_for_tradingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productsTableAdapter
             // 
@@ -209,13 +115,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.bunifuCircleProgressbar4);
-            this.Controls.Add(this.bunifuCircleProgressbar3);
-            this.Controls.Add(this.bunifuCircleProgressbar1);
-            this.Controls.Add(this.bunifuCircleProgressbar2);
             this.Controls.Add(this.tabControl1);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(1239, 792);
+            this.Size = new System.Drawing.Size(1239, 806);
             this.Load += new System.EventHandler(this.Home_Load);
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
@@ -228,10 +130,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar2;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar3;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar4;
         private _Al_Haddad_for_tradingDataSet _Al_Haddad_for_tradingDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private _Al_Haddad_for_tradingDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
