@@ -88,7 +88,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pos1.BringToFront();
+            pos2.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -108,6 +108,21 @@ namespace WindowsFormsApp2
         private void Form1_Load_1(object sender, EventArgs e)
         {
            
+        }
+
+        private void home1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pos2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

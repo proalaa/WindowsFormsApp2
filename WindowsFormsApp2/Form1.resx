@@ -4787,8 +4787,29 @@
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
+  <data name="pos2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pos2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1239, 806</value>
+  </data>
+  <data name="pos2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pos2.Name" xml:space="preserve">
+    <value>pos2</value>
+  </data>
+  <data name="&gt;&gt;pos2.Type" xml:space="preserve">
+    <value>WindowsFormsApp2.Pos, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pos2.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;pos2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="home1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="home1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1239, 806</value>
@@ -4806,34 +4827,10 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;home1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pos1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="pos1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1239, 800</value>
-  </data>
-  <data name="pos1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;pos1.Name" xml:space="preserve">
-    <value>pos1</value>
-  </data>
-  <data name="&gt;&gt;pos1.Type" xml:space="preserve">
-    <value>WindowsFormsApp2.Pos, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;pos1.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;pos1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="inventory1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="inventory1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>-11, 3</value>
   </data>
   <data name="inventory1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1239, 806</value>
@@ -4873,6 +4870,21 @@
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="pos1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="pos1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1239, 800</value>
+  </data>
+  <data name="pos1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pos1.Name" xml:space="preserve">
+    <value>pos1</value>
+  </data>
+  <data name="&gt;&gt;pos1.Type" xml:space="preserve">
+    <value>WindowsFormsApp2.Pos, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Al-Haddad_for_trading.dbo.productsAllnfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="productsAllnfo">
+          <Key>
+            <PropertyRef Name="SKU" />
+            <PropertyRef Name="اسم المنتج" />
+            <PropertyRef Name="الكمية" />
+            <PropertyRef Name="سعر الشراء" />
+            <PropertyRef Name="سعر البيع" />
+            <PropertyRef Name="المكان" />
+            <PropertyRef Name="المخزن" />
+            <PropertyRef Name="رقم الفاتورة" />
+          </Key>
+          <Property Name="SKU" Type="bigint" Nullable="false" />
+          <Property Name="اسم المنتج" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="الكمية" Type="float" Nullable="false" />
+          <Property Name="سعر الشراء" Type="money" Nullable="false" />
+          <Property Name="سعر البيع" Type="money" Nullable="false" />
+          <Property Name="الوحده" Type="nvarchar" MaxLength="50" />
+          <Property Name="الصنف" Type="nvarchar" MaxLength="50" />
+          <Property Name="المكان" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="المخزن" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="رقم الفاتورة" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="productsAllnfo" EntityType="Self.productsAllnfo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [productsAllnfo].[SKU] AS [SKU], 
+    [productsAllnfo].[اسم المنتج] AS [اسم المنتج], 
+    [productsAllnfo].[الكمية] AS [الكمية], 
+    [productsAllnfo].[سعر الشراء] AS [سعر الشراء], 
+    [productsAllnfo].[سعر البيع] AS [سعر البيع], 
+    [productsAllnfo].[الوحده] AS [الوحده], 
+    [productsAllnfo].[الصنف] AS [الصنف], 
+    [productsAllnfo].[المكان] AS [المكان], 
+    [productsAllnfo].[المخزن] AS [المخزن], 
+    [productsAllnfo].[رقم الفاتورة] AS [رقم الفاتورة]
+    FROM [dbo].[productsAllnfo] AS [productsAllnfo]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="productsAllnfo">
+          <Key>
+            <PropertyRef Name="SKU" />
+            <PropertyRef Name="اسم_المنتج" />
+            <PropertyRef Name="الكمية" />
+            <PropertyRef Name="سعر_الشراء" />
+            <PropertyRef Name="سعر_البيع" />
+            <PropertyRef Name="المكان" />
+            <PropertyRef Name="المخزن" />
+            <PropertyRef Name="رقم_الفاتورة" />
+          </Key>
+          <Property Name="SKU" Type="Int64" Nullable="false" />
+          <Property Name="اسم_المنتج" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="الكمية" Type="Double" Nullable="false" />
+          <Property Name="سعر_الشراء" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="سعر_البيع" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="الوحده" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="الصنف" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="المكان" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="المخزن" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="رقم_الفاتورة" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="productsAllnfoes" EntityType="Self.productsAllnfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="productsAllnfoes">
+            <EntityTypeMapping TypeName="Model.productsAllnfo">
+              <MappingFragment StoreEntitySet="productsAllnfo">
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="اسم_المنتج" ColumnName="اسم المنتج" />
+                <ScalarProperty Name="الكمية" ColumnName="الكمية" />
+                <ScalarProperty Name="سعر_الشراء" ColumnName="سعر الشراء" />
+                <ScalarProperty Name="سعر_البيع" ColumnName="سعر البيع" />
+                <ScalarProperty Name="الوحده" ColumnName="الوحده" />
+                <ScalarProperty Name="الصنف" ColumnName="الصنف" />
+                <ScalarProperty Name="المكان" ColumnName="المكان" />
+                <ScalarProperty Name="المخزن" ColumnName="المخزن" />
+                <ScalarProperty Name="رقم_الفاتورة" ColumnName="رقم الفاتورة" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -38,9 +38,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pos1 = new WindowsFormsApp2.Pos();
-            this.inventory1 = new WindowsFormsApp2.Inventory();
             this.home1 = new WindowsFormsApp2.Home();
+            this.inventory1 = new WindowsFormsApp2.Inventory();
+            this.pos2 = new WindowsFormsApp2.Pos();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -116,21 +116,10 @@
             // 
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.pos2);
             this.panel3.Controls.Add(this.home1);
-            this.panel3.Controls.Add(this.pos1);
             this.panel3.Controls.Add(this.inventory1);
             this.panel3.Name = "panel3";
-            // 
-            // pos1
-            // 
-            this.pos1.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.pos1, "pos1");
-            this.pos1.Name = "pos1";
-            // 
-            // inventory1
-            // 
-            resources.ApplyResources(this.inventory1, "inventory1");
-            this.inventory1.Name = "inventory1";
             // 
             // home1
             // 
@@ -138,6 +127,21 @@
             this.home1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.home1, "home1");
             this.home1.Name = "home1";
+            this.home1.Load += new System.EventHandler(this.home1_Load_1);
+            // 
+            // inventory1
+            // 
+            resources.ApplyResources(this.inventory1, "inventory1");
+            this.inventory1.Name = "inventory1";
+            // 
+            // pos1
+            // 
+            // 
+            // pos2
+            // 
+            this.pos2.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.pos2, "pos2");
+            this.pos2.Name = "pos2";
             // 
             // Form1
             // 
@@ -149,6 +153,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.Enter += new System.EventHandler(this.Form1_Enter);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -168,8 +173,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private Inventory inventory1;
-        private Pos pos1;
         private Home home1;
+        private Pos pos2;
     }
 }
 

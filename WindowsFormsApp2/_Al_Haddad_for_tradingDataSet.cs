@@ -4,6 +4,10 @@
 
     partial class _Al_Haddad_for_tradingDataSet
     {
+        partial class POSsDataTable
+        {
+        }
+
         partial class InvoicesDataTable
         {
         }

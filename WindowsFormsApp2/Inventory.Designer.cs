@@ -49,16 +49,16 @@
             this.الصنفDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.المكانDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.المخزنDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productsAllnfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Al_Haddad_for_tradingDataSet1 = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet1();
-            this.productsAllnfoTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet1TableAdapters.productsAllnfoTableAdapter();
             this.productsAllnfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._Al_Haddad_for_tradingDataSet1 = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet1();
+            this.productsAllnfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsAllnfoTableAdapter = new WindowsFormsApp2._Al_Haddad_for_tradingDataSet1TableAdapters.productsAllnfoTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFlatButton1
@@ -264,7 +264,7 @@
             this.المكانDataGridViewTextBoxColumn,
             this.المخزنDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productsAllnfoBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 120);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -338,24 +338,24 @@
             this.المخزنDataGridViewTextBoxColumn.Name = "المخزنDataGridViewTextBoxColumn";
             this.المخزنDataGridViewTextBoxColumn.Width = 125;
             // 
-            // productsAllnfoBindingSource
+            // productsAllnfoBindingSource1
             // 
-            this.productsAllnfoBindingSource.DataMember = "productsAllnfo";
-            this.productsAllnfoBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet1;
+            this.productsAllnfoBindingSource1.DataMember = "productsAllnfo";
+            this.productsAllnfoBindingSource1.DataSource = this._Al_Haddad_for_tradingDataSet1;
             // 
             // _Al_Haddad_for_tradingDataSet1
             // 
             this._Al_Haddad_for_tradingDataSet1.DataSetName = "_Al_Haddad_for_tradingDataSet1";
             this._Al_Haddad_for_tradingDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // productsAllnfoBindingSource
+            // 
+            this.productsAllnfoBindingSource.DataMember = "productsAllnfo";
+            this.productsAllnfoBindingSource.DataSource = this._Al_Haddad_for_tradingDataSet1;
+            // 
             // productsAllnfoTableAdapter
             // 
             this.productsAllnfoTableAdapter.ClearBeforeFill = true;
-            // 
-            // productsAllnfoBindingSource1
-            // 
-            this.productsAllnfoBindingSource1.DataMember = "productsAllnfo";
-            this.productsAllnfoBindingSource1.DataSource = this._Al_Haddad_for_tradingDataSet1;
             // 
             // Inventory
             // 
@@ -370,9 +370,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Al_Haddad_for_tradingDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsAllnfoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
